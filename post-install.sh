@@ -5,6 +5,7 @@ if gh auth status &>/dev/null; then
 else
     echo "🔑 Logging into GitHub..."
     gh auth login -p https -w -c
+	gh auth setup-git
 fi
 
 
