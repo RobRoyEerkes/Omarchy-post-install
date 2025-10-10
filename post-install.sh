@@ -1,6 +1,7 @@
 #!/bin/bash
 
-notify-send "hi from curl"
+gh auth login -p "https" -w -h "github.com"
+
 yay -S --noconfirm --needed zen-browser-bin rmpc mpd stow ghostty
 
 # nvim installation
