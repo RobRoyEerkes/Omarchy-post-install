@@ -1,6 +1,12 @@
 #!/bin/bash
 
-gh auth login -p https -w -c
+if gh auth status &>/dev/null; then
+    echo "✅ GitHub CLI already authenticated."
+else
+    echo "🔑 Logging into GitHub..."
+    gh auth login -p https -w -c
+fi
+
 
 yay -S --noconfirm --needed zen-browser-bin rmpc mpd stow ghostty
 
