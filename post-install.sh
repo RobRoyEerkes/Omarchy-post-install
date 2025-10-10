@@ -1,6 +1,6 @@
 #!/bin/bash
 
-gh auth login -p "https" -w -c
+gh auth login -p https -w -c
 
 yay -S --noconfirm --needed zen-browser-bin rmpc mpd stow ghostty
 
