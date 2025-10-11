@@ -9,7 +9,7 @@ else
 fi
 
 
-yay -S --noconfirm --needed zen-browser-bin rmpc mpd stow ghostty
+yay -S --noconfirm --needed zen-browser-bin rmpc mpd stow ghostty udisks2
 
 # nvim installation
 rm -rf ~/.config/nvim/
@@ -18,6 +18,8 @@ rm -rf ~/.config/ghostty/
 git clone https://github.com/RobRoyEerkes/dotfiles
 cd dotfiles
 stow -S {nvim,rmpc,ghostty,uwsm}
+cd
 xdg-settings set default-web-browser zen.desktop
 
+mkdir -p ~/Music/{Playlists,lyrics}
 systemctl --user enable --now mpd
