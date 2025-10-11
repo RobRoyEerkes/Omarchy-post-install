@@ -9,7 +9,17 @@ else
 fi
 
 
-yay -S --noconfirm --needed zen-browser-bin rmpc mpd stow ghostty udisks2
+yay -S --noconfirm --needed zen-browser-bin rmpc mpd stow ghostty udisks2 openrgb glab
+if glab auth status &>/dev/null; then
+    echo "✅ GitLab CLI already authenticated."
+else
+    echo "🔑 Logging into GitHub..."
+    glab auth login
+	
+	git config --global credential.https://gitlab.com.helper '!/usr/bin/glab auth git-credential'
+fi
+
+
 
 # nvim installation
 rm -rf ~/.config/nvim/
