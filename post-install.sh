@@ -17,7 +17,7 @@ rm -rf ~/.config/uwsm/
 rm -rf ~/.config/ghostty/
 git clone https://github.com/RobRoyEerkes/dotfiles
 cd dotfiles
-stow -S {nvim, rmpc, ghostty, uwsm}
+stow -S {nvim,rmpc,ghostty,uwsm}
 xdg-settings set default-web-browser zen.desktop
 
 systemctl --user enable --now mpd
