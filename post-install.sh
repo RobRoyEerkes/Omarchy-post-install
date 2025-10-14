@@ -10,7 +10,7 @@ echo "setting up zen"
 zen-browser &
 sleep 2
 
-kill zen-bin
+pkill zen-bin
 
 if gh auth status &>/dev/null; then
     echo "✅ GitHub CLI already authenticated."
