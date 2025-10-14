@@ -21,7 +21,7 @@ rm -rf ~/.config/hypr/
 rm -rf dotfiles
 git clone -b omarchy https://github.com/RobRoyEerkes/dotfiles
 cd dotfiles
-stow -S {nvim,rmpc,ghostty,uwsm, hypr}
+stow -S {nvim,rmpc,ghostty,uwsm,hypr}
 cd
 xdg-settings set default-web-browser zen.desktop
 
