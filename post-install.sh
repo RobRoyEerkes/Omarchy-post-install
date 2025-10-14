@@ -3,7 +3,7 @@
 
 
 echo "Installing packages"
-yay -Syu --noconfirm --needed zen-browser-bin rmpc mpd stow ghostty udisks2 openrgb glab
+yay -Syu --noconfirm --needed zen-browser-bin rmpc mpd stow ghostty udisks2 openrgb glab kitty
 
 xdg-settings set default-web-browser zen.desktop
 
