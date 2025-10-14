@@ -13,8 +13,8 @@ yay -S --noconfirm --needed zen-browser-bin rmpc mpd stow ghostty udisks2 openrg
 if glab auth status &>/dev/null; then
     echo "✅ GitLab CLI already authenticated."
 else
-    echo "🔑 Logging into GitHub..."
-    glab auth login --hostname gitlab.com
+    echo "🔑 Logging into GitLab..."
+    glab auth login
 	
 	git config --global credential.https://gitlab.com.helper '!/usr/bin/glab auth git-credential'
 fi
