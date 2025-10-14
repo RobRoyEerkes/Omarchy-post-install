@@ -16,9 +16,8 @@ else
     echo "🔑 Logging into GitLab..."
 	#try scripted
     /usr/bin/expect -c "spawn glab auth login --hostname gitlab.com;
-	expect "What GitLab instance do you want to log into?";
-	send "gitlab.com\r";
-	expect "How would you like to authenticate?";
+
+	expect "How would you like to sign in?";
 	send "Web browser\r";
 	interact;"
 	git config --global credential.https://gitlab.com.helper '!/usr/bin/glab auth git-credential'
