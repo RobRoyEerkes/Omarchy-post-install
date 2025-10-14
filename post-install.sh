@@ -14,7 +14,7 @@ if glab auth status &>/dev/null; then
     echo "✅ GitLab CLI already authenticated."
 else
     echo "🔑 Logging into GitHub..."
-    glab auth login --web --hostname gitlab.com
+    glab auth login --hostname gitlab.com
 	
 	git config --global credential.https://gitlab.com.helper '!/usr/bin/glab auth git-credential'
 fi
