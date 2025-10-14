@@ -26,6 +26,7 @@ fi
 rm -rf ~/.config/nvim/
 rm -rf ~/.config/uwsm/
 rm -rf ~/.config/ghostty/
+rm -rf dotfiles
 git clone -b omarchy https://github.com/RobRoyEerkes/dotfiles
 cd dotfiles
 stow -S {nvim,rmpc,ghostty,uwsm}
