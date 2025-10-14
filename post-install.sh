@@ -31,5 +31,6 @@ git checkout omarchy
 stow -S {nvim,rmpc,ghostty,uwsm,hypr}
 cd
 
+hyprctl reload
 mkdir -p ~/Music/{Playlists,lyrics}
 systemctl --user enable --now mpd
