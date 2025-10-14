@@ -6,7 +6,8 @@ echo "Installing packages"
 yay -Syu --noconfirm --needed zen-browser-bin rmpc mpd stow ghostty udisks2 openrgb glab kitty
 
 xdg-settings set default-web-browser zen.desktop
-
+zen-browser
+killall zen-browser
 
 if gh auth status &>/dev/null; then
     echo "✅ GitHub CLI already authenticated."
