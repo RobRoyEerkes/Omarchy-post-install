@@ -15,14 +15,12 @@ if glab auth status &>/dev/null; then
 else
     echo "🔑 Logging into GitLab..."
 	#try scripted
-    expect <<END_EXPECT
-	spawn glab auth login --hostname gitlab.com
-	expect "What GitLab instance do you want to log into?"
-	send "gitlab.com\r"
-	expect "How would you like to authenticate?"
-	send "Web browser\r"
-	interact
-	END_EXPECT
+    echo "spawn glab auth login --hostname gitlab.com;
+	expect "What GitLab instance do you want to log into?";
+	send "gitlab.com\r";
+	expect "How would you like to authenticate?";
+	send "Web browser\r";
+	interact;" | /usr/bin/expect -c 
 	git config --global credential.https://gitlab.com.helper '!/usr/bin/glab auth git-credential'
 fi
 
