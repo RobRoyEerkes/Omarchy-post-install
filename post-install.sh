@@ -33,7 +33,7 @@ cd dotfiles
 git checkout omarchy
 stow -S {nvim,rmpc,ghostty,uwsm,hypr}
 cd
-
+# reloading hyprland
 hyprctl reload
 mkdir -p ~/Music/{Playlists,lyrics}
 systemctl --user enable --now mpd
