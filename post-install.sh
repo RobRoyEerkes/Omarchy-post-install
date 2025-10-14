@@ -14,7 +14,7 @@ if glab auth status &>/dev/null; then
     echo "✅ GitLab CLI already authenticated."
 else
     echo "🔑 Logging into GitHub..."
-    glab auth login
+    glab auth login --web --hostname gitlab.com
 	
 	git config --global credential.https://gitlab.com.helper '!/usr/bin/glab auth git-credential'
 fi
@@ -25,7 +25,7 @@ fi
 rm -rf ~/.config/nvim/
 rm -rf ~/.config/uwsm/
 rm -rf ~/.config/ghostty/
-git clone https://github.com/RobRoyEerkes/dotfiles
+git clone -b omarchy https://github.com/RobRoyEerkes/dotfiles
 cd dotfiles
 stow -S {nvim,rmpc,ghostty,uwsm}
 cd
