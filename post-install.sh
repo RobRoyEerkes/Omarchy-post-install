@@ -9,13 +9,13 @@ else
 fi
 
 
-yay -S --noconfirm --needed zen-browser-bin rmpc mpd stow ghostty udisks2 openrgb glab
+yay -S --noconfirm --needed zen-browser-bin rmpc mpd stow ghostty udisks2 openrgb glab expect
 if glab auth status &>/dev/null; then
     echo "✅ GitLab CLI already authenticated."
 else
     echo "🔑 Logging into GitLab..."
 	#try scripted
-    /usr/bin/expect <<'END_EXPECT'
+    /usr/bin/expect <<END_EXPECT
 	spawn glab auth login --hostname gitlab.com
 	expect "What GitLab instance do you want to log into?"
 	send "gitlab.com\r"
