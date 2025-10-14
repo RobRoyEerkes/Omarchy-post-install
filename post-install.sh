@@ -9,7 +9,7 @@ else
 fi
 
 
-yay -S --noconfirm --needed zen-browser-bin rmpc mpd stow ghostty udisks2 openrgb
+yay -S --noconfirm --needed zen-browser-bin rmpc mpd stow ghostty udisks2 openrgb glab
 
 # nvim installation
 rm -rf ~/.config/nvim/
