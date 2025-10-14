@@ -9,20 +9,7 @@ else
 fi
 
 
-yay -S --noconfirm --needed zen-browser-bin rmpc mpd stow ghostty udisks2 openrgb glab expect
-if glab auth status &>/dev/null; then
-    echo "✅ GitLab CLI already authenticated."
-else
-    echo "🔑 Logging into GitLab..."
-	#try scripted
-    /usr/bin/expect -c "spawn glab auth login --hostname gitlab.com;
-	expect "How";
-	send "Web\r";
-	interact;"
-	git config --global credential.https://gitlab.com.helper '!/usr/bin/glab auth git-credential'
-fi
-
-
+yay -S --noconfirm --needed zen-browser-bin rmpc mpd stow ghostty udisks2 openrgb
 
 # nvim installation
 rm -rf ~/.config/nvim/
