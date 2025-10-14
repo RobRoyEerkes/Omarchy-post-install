@@ -7,7 +7,7 @@ yay -Syu --noconfirm --needed zen-browser-bin rmpc mpd stow ghostty udisks2 open
 
 xdg-settings set default-web-browser zen.desktop
 zen-browser
-killall zen-browser
+kill zen-browser
 
 if gh auth status &>/dev/null; then
     echo "✅ GitHub CLI already authenticated."
