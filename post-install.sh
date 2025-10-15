@@ -11,6 +11,7 @@ zen-browser &
 sleep 2
 
 pkill zen-bin
+zen-browser about:preferences
 
 if gh auth status &>/dev/null; then
     echo "✅ GitHub CLI already authenticated."
@@ -33,6 +34,7 @@ cd dotfiles
 git checkout omarchy
 stow -S {nvim,rmpc,ghostty,uwsm,hypr}
 cd
+
 # reloading hyprland
 hyprctl reload
 mkdir -p ~/Music/{Playlists,lyrics}
