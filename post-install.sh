@@ -11,7 +11,7 @@ zen-browser &
 sleep 2
 
 pkill zen-bin
-zen-browser about:preferences
+zen-browser about:preferences#sync
 
 if gh auth status &>/dev/null; then
     echo "✅ GitHub CLI already authenticated."
