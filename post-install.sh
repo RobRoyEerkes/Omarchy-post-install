@@ -34,7 +34,7 @@ cd dotfiles
 git checkout omarchy
 stow -S {nvim,rmpc,ghostty,uwsm,hypr}
 cd
-
+cp dotfiles/scripts/omarchy-launch-webapp .local/share/omarchy/bin
 # reloading hyprland
 hyprctl reload
 mkdir -p ~/Music/{Playlists,lyrics}
