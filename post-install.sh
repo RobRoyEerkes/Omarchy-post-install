@@ -24,7 +24,7 @@ fi
 
 echo "Installing dotfiles"
 # nvim installation
-rm -rf ~/.config/nvim/
+#rm -rf ~/.config/nvim/
 rm -rf ~/.config/uwsm/
 rm -rf ~/.config/ghostty/
 rm -rf ~/.config/hypr/
@@ -32,7 +32,7 @@ rm -rf dotfiles
 git clone -b omarchy https://github.com/RobRoyEerkes/dotfiles
 cd dotfiles
 git checkout omarchy
-stow -S {nvim,rmpc,ghostty,uwsm,hypr}
+stow -S {rmpc,ghostty,uwsm,hypr}
 cd
 cp dotfiles/scripts/omarchy-launch-webapp .local/share/omarchy/bin
 # reloading hyprland
